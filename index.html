@@ -10,15 +10,14 @@
     <div id="container">
       <h1>The Fetch API Exercises</h1>
       <p>Open the web inspector console to test.</p>
-      <button id="btn" type="click">Load Dog Photo</button>
     </div>
   </body>
   <script>
-    // Place your code below this line
-    //bodu append the button
+    //Place your code below this line
+    //append the button
 
-    // const btn = `<button id="btn" type="click">Load Dog Photo</button><br><br>`;
-    // const btnShow = document.querySelector(`#container`).insertAdjacentHTML(`beforeend`,btn);
+    const btn = `<button id="btn" type="click">Load Dog Photo</button>`;
+    const btnShow = document.querySelector(`#container`).insertAdjacentHTML(`beforeend`,btn);
 
     function getRandsomDogPhoto() {
       return fetch("https://dog.ceo/api/breeds/image/random");
@@ -46,8 +45,6 @@
       init();
       });
 
-
-
     function renderDogPhoto(url) {
       const img = `<img src='${url}' alt='Random photo of a dog' />`;
       document.querySelector(`#container`).insertAdjacentHTML(`beforeend`, img);
@@ -68,62 +65,5 @@
       spinner.parentElement.removeChild(spinner);
     }
 
-    // async function getRandsomDogPhoto() {
-    //   // let url = "https://dog.ceo/api/breeds/image/random";
-    //   return fetch("https://dog.ceo/api/breeds/image/random")
-    //     .then((reponse) => reponse.json())
-    //     .then((data) => {
-    //       console.log(data);
-
-    //       // document
-    //       //   .querySelector(`#container`)
-    //       //   .insertAdjacentHTML(
-    //       //     `beforeend`,
-    //       //     `<img src='${data.message}' alt='Random photo of a dog' />`
-    //       //   );
-    //     })
-    //     .catch((error) => console.error(error));
-    // }
-
-
-
-    //load spinner
-    //disable to the buttom ane insert j
-    //removeSpinner: remove child
-
-    //hand
-
-    //insert image
-    //button.disable = true;
-
-    //submit => click lisente
-
-    //load spinner
-
-    //get the data
-    //remove spinner => remove child
-    //button.remove
-
-    //init eventhandler s
-    //
-
-    // async  function getData(){
-    //     let url = "https://dog.ceo/api/breeds/image/random";
-
-    //     await fetch(url)
-    //     .then((reponse) => reponse.json())
-    //     .then((data) => {
-    //       console.log(data);
-    //     })
-    //     .catch((error) => console.error(error));
-    //   }
-
-    //   getData();
-
-    //     function generateRandomNumber() {
-    //   var random = Math.floor(Math.random() * 10 + 1);
-    //   console.log(random);
-    //   return random;
-    // }
   </script>
 </html>
